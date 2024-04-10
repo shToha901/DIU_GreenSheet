@@ -1,23 +1,24 @@
-#include<bits/stdc++.h>
+// CODE FOR: Bhaskara's Formula
+
+#include <bits/stdc++.h>
 using namespace std;
 
 int main()
 {
-	double a, b, c;
-	cin >> a >> b >> c;
+    // input
+    float a, b, c;
+    cin >> a >> b >> c;
 
-	double discriminant = (b * b) - 4 * a * c;
+    // output
+    float determinent = (b * b) - (4 * a * c);
 
-	if(discriminant < 0 || a == 0)
-		cout << "Impossivel calcular" << endl;
-	else
-	{
-		double R1 = (- b + sqrt(discriminant) ) / (2 *a);
-		double R2 = (- b - sqrt(discriminant) ) / (2 *a);
+    if (determinent < 0 || a == 0)
+        cout << "Impossivel calcular" << endl;
+    else
+    {
+        cout << "R1 = " << fixed << setprecision(5) << (-b + sqrt(determinent)) / (2 * a) << endl;
+        cout << "R2 = " << fixed << setprecision(5) << (-b - sqrt(determinent)) / (2 * a) << endl;
+    }
 
-		cout << "R1 = " << fixed << setprecision(5) << R1 << endl;
-		cout << "R2 = " << fixed << setprecision(5) << R2 << endl;
-	}
-
-	return 0;
+    return 0;
 }

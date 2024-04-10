@@ -1,14 +1,15 @@
+// CODE FOR: DDD
+
 #include <bits/stdc++.h>
 using namespace std;
 
 int main()
 {
+    // input
     int number;
-    do
-    {
-        cin >> number;
-    } while (number < 1 || number > 12);
+    cin >> number;
 
+    // output
     switch (number)
     {
     case 1:
@@ -48,4 +49,6 @@ int main()
         cout << "December" << endl;
         break;
     }
+
+    return 0;
 }
